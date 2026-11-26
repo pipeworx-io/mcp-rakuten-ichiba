@@ -1,0 +1,44 @@
+[
+  {
+    "name": "rakuten_item_search",
+    "description": "ANSWERS \"what does <item> cost on Rakuten Japan\" / \"cheapest <product> on Rakuten Ichiba\", searches items on Japan's Rakuten Ichiba marketplace by keyword (Japanese or English) and returns name, price in JPY, shop, review score and item link. Data: Rakuten Group, Rakuten Ichiba item data. Requires your own free Rakuten Web Service key: pass `_apiKey` as \"applicationId:accessKey\"; without it the tool says it requires an API key. Returns up to 30 items per page.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "description": "Search words, e.g. \"ワイン\" or \"sake set\""
+        },
+        "hits": {
+          "type": "number",
+          "description": "Items per page, 1-30 (default 10)"
+        },
+        "page": {
+          "type": "number",
+          "description": "Page number, 1-100 (default 1)"
+        },
+        "sort": {
+          "type": "string",
+          "enum": [
+            "standard",
+            "price_asc",
+            "price_desc",
+            "reviews"
+          ],
+          "description": "Order (default standard = relevance)"
+        },
+        "min_price": {
+          "type": "number",
+          "description": "Minimum price, JPY"
+        },
+        "max_price": {
+          "type": "number",
+          "description": "Maximum price, JPY"
+        }
+      },
+      "required": [
+        "keyword"
+      ]
+    }
+  }
+]

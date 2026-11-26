@@ -1,0 +1,33 @@
+{
+  "name": "@pipeworx/mcp-rakuten-ichiba",
+  "version": "0.1.0",
+  "description": "Rakuten Ichiba item search (fleet #4908): prices and shops for items listed on Japan's Rakuten Ichiba marketplace, from Rakuten Group's Rakuten Web Service.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "mcp-rakuten-ichiba": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "rakuten-ichiba"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-rakuten-ichiba.git"
+  },
+  "mcpName": "io.github.pipeworx-io/rakuten-ichiba",
+  "pipeworx": {
+    "mode": "gateway",
+    "slug": "rakuten-ichiba",
+    "gatewaySlug": "rakuten-ichiba",
+    "sourceHash": "v1-5b1ee12e9bb464eaaee6e0d682909a03fec6c0e10c53fde4bbda6f60802b9c18",
+    "sourceCommit": "b5770e7d2cfd824119c585efde900ebb224bfbe6"
+  }
+}
